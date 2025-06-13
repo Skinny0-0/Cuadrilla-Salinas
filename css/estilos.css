@@ -1,0 +1,144 @@
+body {
+  background-color: #f1e9dd;
+  font-family: 'Georgia', serif;
+  color: #5a3e1b;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Cajas con estilo vaquero */
+.box {
+  background-color: #fff8f0;
+  border: 4px solid #8b5e3c;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(139, 94, 60, 0.3);
+  padding: 40px 50px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.box::before,
+.box::after {
+  content: "⭐";
+  font-size: 2rem;
+  color: #8b5e3c;
+  position: absolute;
+  top: 15px;
+}
+
+.box::before {
+  left: 15px;
+}
+
+.box::after {
+  right: 15px;
+}
+
+.box h2, .box h3 {
+  color: #8b5e3c;
+  text-shadow: 1px 1px 2px #b28a63;
+  letter-spacing: 2px;
+}
+
+.box p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #5a3e1b;
+}
+
+/* Botones personalizados */
+.btn-primary {
+  background-color: #8b5e3c;
+  border: none;
+  font-weight: bold;
+  padding: 12px 30px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(139,94,60,0.5);
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #5a3e1b;
+}
+/* Cajas para secciones */
+.box {
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 40px;
+  background-color: #fdfdfd;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Borde decorativo para video */
+.video-plumas {
+  width: 100%;
+  max-width: 700px;
+  border: 20px solid transparent;
+  border-image: url('../imagenes/plumas-borde.png') 30 round;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.feather-border {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(122, 82, 48, 0.5); /* sombra marrón suave */
+  border: 4px solid #7a5230; /* borde madera oscura */
+  background: #f9f3ea; /* color arena suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Añadir un "tachuela" decorativa simulada */
+.gallery-item::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(circle at center, #d1b280 0%, #7a5230 70%);
+  border-radius: 50%;
+  box-shadow: 0 0 6px #7a5230;
+}
+
+/* Hover con toque más rústico */
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 16px 32px rgba(122, 82, 48, 0.8);
+  border-color: #d1b280;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  display: block;
+  border-radius: 8px;
+  filter: sepia(0.2) contrast(1.1); /* efecto rústico suave */
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+  filter: sepia(0.4) contrast(1.2);
+}
+
